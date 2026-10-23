@@ -1096,7 +1096,102 @@ footer p {
   width: 100% !important;
   max-height: 250px !important;
   height: none !important;
+
+
 }
+
+/* Fix homepage layout on mobile screens */
+@media (max-width: 700px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 35px 22px 180px;
+    min-height: auto;
+    overflow: hidden;
+  }
+
+  .hero-content {
+    order: 1;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    padding: 0;
+    transform: none;
+  }
+
+  .hero-art {
+    order: 2;
+    width: 100%;
+    min-height: 0;
+    margin: 0;
+    justify-content: center;
+  }
+
+  .portrait {
+    width: 78%;
+    max-width: 320px;
+    max-height: none;
+    transform: none;
+  }
+
+  /* Keep the decorative manga away from the text */
+  .about-me-collage {
+    width: 65%;
+    max-width: 300px;
+    max-height: none;
+    bottom: 10px;
+    left: 0;
+    opacity: 0.9;
+  }
+
+  .study-banner-wrap {
+    width: 65%;
+    max-width: 320px;
+    max-height: none;
+    right: 0;
+    bottom: 10px;
+  }
+
+  .study-banner {
+    width: 100%;
+    height: auto;
+    max-height: none;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2.4rem, 10vw, 3.5rem);
+    overflow-wrap: anywhere;
+  }
+
+  .intro {
+    overflow-wrap: anywhere;
+  }
+}
+
+/* Smaller phones */
+@media (max-width: 420px) {
+  .about-me-collage {
+    width: 58%;
+  }
+
+  .study-banner-wrap {
+    width: 58%;
+  }
+
+  .hero-actions {
+    flex-wrap: wrap;
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+  }
+}
+
+
+
+
 /* =====================================
    SKILLS PAGE — FRENCH PUCE & VANILLA
    ===================================== */
