@@ -1,0 +1,762 @@
+
+/* ========================================
+   SMS SPAM DETECTION
+   Butter Yellow & Cocoa Theme
+======================================== */
+
+:root {
+  --sms-cocoa: #493D27;
+  --sms-cream: #FFF2C6;
+  --sms-yellow: #F4D77D;
+  --sms-gold: #D6B65C;
+  --sms-vanilla: #F9EBD0;
+  --sms-soft-gold: #F8E3A0;
+  --sms-muted: #806A3D;
+  --sms-white: #FFFCF3;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body.sms-page {
+  background: var(--sms-cocoa);
+  color: var(--sms-cocoa);
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.7;
+}
+
+.sms-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.sms-page img {
+  display: block;
+  max-width: 100%;
+}
+
+/* HEADER */
+
+.sms-header {
+  width: min(1180px, 90%);
+  margin: 0 auto;
+  padding: 26px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.sms-brand {
+  color: var(--sms-cream) !important;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.sms-brand span {
+  color: var(--sms-yellow);
+}
+
+.sms-back-link {
+  color: var(--sms-cream) !important;
+  border: 1px solid rgba(255, 242, 198, 0.4);
+  border-radius: 30px;
+  padding: 9px 18px;
+  font-size: 0.88rem;
+  transition: 0.3s ease;
+}
+
+.sms-back-link:hover {
+  background: var(--sms-yellow);
+  color: var(--sms-cocoa) !important;
+  border-color: var(--sms-yellow);
+}
+
+/* MAIN LAYOUT */
+
+.sms-main {
+  width: min(1180px, 90%);
+  margin: 0 auto;
+  padding-bottom: 55px;
+}
+
+/* HERO */
+
+.sms-hero {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 50px;
+  padding: 65px 55px;
+  background: var(--sms-cream);
+  border-radius: 28px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+}
+
+.sms-hero::before {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: rgba(244, 215, 125, 0.3);
+  top: -160px;
+  left: -90px;
+  pointer-events: none;
+}
+
+.sms-hero-text {
+  position: relative;
+  z-index: 1;
+}
+
+.sms-handwriting {
+  font-family: "Caveat", cursive;
+  font-size: 1.65rem;
+  color: var(--sms-muted);
+  line-height: 1.3;
+}
+
+.sms-eyebrow {
+  margin: 22px 0 12px;
+  color: var(--sms-muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.sms-hero h1 {
+  max-width: 600px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.5rem, 5vw, 4.3rem);
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+}
+
+.sms-hero h1 span {
+  color: #A47D24;
+  display: block;
+}
+
+.sms-tagline {
+  margin-top: 22px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.sms-description {
+  max-width: 520px;
+  margin-top: 12px;
+  color: #6E6045;
+  font-size: 0.96rem;
+}
+
+.sms-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 25px;
+}
+
+.sms-tags span {
+  padding: 7px 13px;
+  border: 1px solid #E1C875;
+  border-radius: 30px;
+  background: var(--sms-soft-gold);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+/* HERO ILLUSTRATION */
+
+.sms-hero-art {
+  position: relative;
+  padding: 22px;
+}
+
+.sms-chat-card {
+  position: relative;
+  z-index: 1;
+  padding: 22px;
+  border: 1px solid #E6D49A;
+  border-radius: 22px;
+  background: var(--sms-white);
+  box-shadow: 0 16px 35px rgba(73, 61, 39, 0.12);
+  transform: rotate(1deg);
+}
+
+.sms-chat-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid #EDE2C5;
+  color: var(--sms-muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.sms-status-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #B8A04E;
+}
+
+.sms-message {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 92%;
+  padding: 14px;
+  margin-top: 19px;
+  border-radius: 14px;
+  font-size: 0.85rem;
+}
+
+.sms-message small {
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+.sms-message.received {
+  background: #F2EBD9;
+  border-bottom-left-radius: 4px;
+}
+
+.sms-message.suspicious {
+  margin-left: auto;
+  background: #F8E4A8;
+  border-bottom-right-radius: 4px;
+}
+
+.sms-analysis {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 22px;
+  padding: 15px;
+  background: #F8F1DE;
+  border-radius: 14px;
+}
+
+.sms-analysis-icon {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: var(--sms-yellow);
+  font-size: 1.4rem;
+}
+
+.sms-analysis strong {
+  font-size: 0.83rem;
+}
+
+.sms-analysis p {
+  color: var(--sms-muted);
+  font-size: 0.72rem;
+}
+
+.sms-decoration {
+  position: absolute;
+  z-index: 2;
+  color: #B28A2D;
+}
+
+.sms-star {
+  top: 0;
+  right: 0;
+  font-size: 2.8rem;
+}
+
+.sms-heart {
+  bottom: 0;
+  left: 0;
+  font-size: 2.5rem;
+}
+
+/* SECTION HEADINGS */
+
+.sms-section {
+  margin-top: 55px;
+  scroll-margin-top: 25px;
+}
+
+.sms-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  margin-bottom: 25px;
+  color: var(--sms-cream);
+}
+
+.sms-section-number {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  border-radius: 17px;
+  background: var(--sms-yellow);
+  color: var(--sms-cocoa);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.sms-section-heading .sms-handwriting {
+  color: var(--sms-yellow);
+  font-size: 1.35rem;
+}
+
+.sms-section-heading h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  line-height: 1.3;
+}
+
+/* ABOUT */
+
+.sms-paper-card {
+  padding: 34px;
+  border: 1px solid #E9D99F;
+  border-radius: 22px;
+  background: var(--sms-cream);
+}
+
+.sms-paper-card > p {
+  margin-bottom: 16px;
+  color: #65583F;
+}
+
+.sms-highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-top: 25px;
+  padding: 19px;
+  border-left: 4px solid #B28A2D;
+  border-radius: 0 13px 13px 0;
+  background: var(--sms-soft-gold);
+}
+
+.sms-highlight > span {
+  font-size: 1.4rem;
+}
+
+.sms-highlight p {
+  color: var(--sms-cocoa);
+}
+
+/* TECHNOLOGIES */
+
+.sms-tech-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.sms-tech-card {
+  padding: 25px 14px;
+  text-align: center;
+  border: 1px solid #E9D99F;
+  border-radius: 19px;
+  background: var(--sms-cream);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sms-tech-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.sms-tech-icon {
+  display: grid;
+  place-items: center;
+  width: 55px;
+  height: 55px;
+  margin: 0 auto 15px;
+  border-radius: 17px;
+  background: var(--sms-yellow);
+  color: var(--sms-cocoa);
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.sms-tech-card h3 {
+  font-size: 0.92rem;
+}
+
+.sms-tech-card p {
+  margin-top: 7px;
+  color: var(--sms-muted);
+  font-size: 0.77rem;
+}
+
+/* WORKFLOW */
+
+.sms-workflow {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 13px;
+}
+
+.sms-workflow-step {
+  flex: 1;
+  min-width: 0;
+  padding: 22px 13px;
+  border: 1px solid #E9D99F;
+  border-radius: 18px;
+  background: var(--sms-cream);
+  text-align: center;
+}
+
+.sms-workflow-step > span {
+  color: #A47D24;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.sms-workflow-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin: 13px auto;
+  border-radius: 15px;
+  background: var(--sms-yellow);
+  font-size: 1.35rem;
+}
+
+.sms-workflow-step h3 {
+  font-size: 0.92rem;
+}
+
+.sms-workflow-step p {
+  margin-top: 7px;
+  color: var(--sms-muted);
+  font-size: 0.76rem;
+}
+
+.sms-workflow-arrow {
+  align-self: center;
+  color: var(--sms-yellow);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.sms-note {
+  margin-top: 17px;
+  color: #E7D7A9;
+  font-size: 0.82rem;
+  font-style: italic;
+}
+
+/* FEATURES */
+
+.sms-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.sms-feature-card {
+  padding: 27px;
+  border: 1px solid #E9D99F;
+  border-radius: 19px;
+  background: var(--sms-cream);
+  transition: transform 0.25s ease;
+}
+
+.sms-feature-card:hover {
+  transform: translateY(-4px);
+}
+
+.sms-feature-card > span {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 15px;
+  border-radius: 14px;
+  background: var(--sms-yellow);
+  font-size: 1.4rem;
+}
+
+.sms-feature-card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+}
+
+.sms-feature-card p {
+  margin-top: 7px;
+  color: var(--sms-muted);
+  font-size: 0.9rem;
+}
+
+/* GALLERY */
+
+.sms-gallery-intro {
+  margin-top: -10px;
+  margin-bottom: 22px;
+  color: #E7D7A9;
+}
+
+.sms-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.sms-gallery-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #E9D99F;
+  border-radius: 20px;
+  background: var(--sms-cream);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sms-gallery-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.16);
+}
+
+.sms-gallery-card img {
+  width: 100%;
+  height: 290px;
+  padding: 12px;
+  background: var(--sms-vanilla);
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.sms-gallery-card:hover img {
+  transform: scale(1.02);
+}
+
+.sms-gallery-card figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 18px 20px 21px;
+}
+
+.sms-gallery-card figcaption strong {
+  font-family: "Playfair Display", serif;
+  font-size: 1.08rem;
+}
+
+.sms-gallery-card figcaption span {
+  color: var(--sms-muted);
+  font-size: 0.82rem;
+}
+
+/* CLOSING */
+
+.sms-closing {
+  margin-top: 65px;
+  padding: 50px 30px;
+  border: 1px solid #E9D99F;
+  border-radius: 27px;
+  background: var(--sms-cream);
+  text-align: center;
+}
+
+.sms-closing-heart {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 18px;
+  border-radius: 19px;
+  background: var(--sms-yellow);
+  font-size: 1.8rem;
+}
+
+.sms-closing .sms-handwriting {
+  margin-bottom: 7px;
+}
+
+.sms-closing h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.7rem, 3vw, 2.6rem);
+}
+
+.sms-closing > p:not(.sms-handwriting) {
+  max-width: 580px;
+  margin: 13px auto 24px;
+  color: var(--sms-muted);
+}
+
+.sms-home-button {
+  display: inline-block;
+  padding: 13px 23px;
+  border: 1px solid var(--sms-cocoa);
+  border-radius: 30px;
+  background: var(--sms-cocoa);
+  color: var(--sms-cream) !important;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+.sms-home-button:hover {
+  background: var(--sms-yellow);
+  color: var(--sms-cocoa) !important;
+  border-color: var(--sms-yellow);
+  transform: translateY(-2px);
+}
+
+/* FOOTER */
+
+.sms-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  width: min(1180px, 90%);
+  margin: 0 auto;
+  padding: 27px 0 35px;
+  color: var(--sms-cream);
+  font-size: 0.82rem;
+}
+
+.sms-footer span {
+  color: #D7C79A;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+  .sms-hero {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 42px 35px;
+  }
+
+  .sms-hero-art {
+    width: min(100%, 480px);
+    margin: 0 auto;
+  }
+
+  .sms-tech-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .sms-workflow {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sms-workflow-arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .sms-header {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 20px 0;
+  }
+
+  .sms-main {
+    width: 92%;
+  }
+
+  .sms-hero {
+    padding: 30px 22px;
+    border-radius: 21px;
+  }
+
+  .sms-hero h1 {
+    font-size: 2.7rem;
+  }
+
+  .sms-eyebrow {
+    font-size: 0.62rem;
+    letter-spacing: 1.2px;
+  }
+
+  .sms-hero-art {
+    padding: 10px;
+  }
+
+  .sms-chat-card {
+    padding: 16px;
+  }
+
+  .sms-section {
+    margin-top: 42px;
+  }
+
+  .sms-section-heading {
+    gap: 13px;
+  }
+
+  .sms-section-number {
+    width: 43px;
+    height: 43px;
+    border-radius: 13px;
+  }
+
+  .sms-paper-card {
+    padding: 23px;
+  }
+
+  .sms-tech-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .sms-workflow {
+    gap: 12px;
+  }
+
+  .sms-workflow-step {
+    padding: 17px 9px;
+  }
+
+  .sms-features-grid,
+  .sms-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .sms-gallery-card img {
+    height: 240px;
+  }
+
+  .sms-closing {
+    padding: 38px 20px;
+  }
+
+  .sms-footer {
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sms-page *,
+  .sms-page *::before,
+  .sms-page *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
